@@ -81,6 +81,49 @@
         </div><!-- end of container -->
     </section> <!-- end of about section -->
 
+
+    <section class="section pt-0" id="xkcd">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="comic">
+                <div class="comic-caption">
+                    <img src="" class="about-img" id="comic_im">
+                    <script> 
+                        async function fun() { 
+                            let url = 'https://fwd.innopolis.app/api/hw2?email=i.mirzazhanov@innopolis.university';
+                            let response = await fetch(url);
+                            let commits = await response.text();
+
+                            let xkcd_url = 'https://getxkcd.vercel.app/api/comic?num='
+                            let img_url = xkcd_url + commits
+
+                            let img_resp = await fetch(img_url);
+                            let text_test = await img_resp.text();
+
+                            //let info = await response.json();
+
+                            let obj = JSON.parse(text_test);
+
+                            let image = document.getElementById("comic_im").src = obj.img;
+
+                            let dis = document.getElementById("disc").firstChild.data = obj.safe_title + '. ' + obj.alt + '\n' + obj.month + ' ' + obj.year;
+
+                            //document.getElementById("comic").value=text_test;
+
+
+                            //alert(commits[0].author.login);
+                        } 
+                    </script>
+
+                    <p class="section-subtitle" id="disc">Want to get XKCD comic?</p>
+                    <h2 class="section-title mb-3">Click button!</h2>
+                    <input type="button" value="Get comic" class="btn-rounded btn btn-outline-primary mt-4" onclick = "fun()" id="comic"></input>
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
     <!-- service section -->
     <section class="section" id="service">
         <div class="container text-center">
