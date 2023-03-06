@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Devcrud">
     <title>Ilya Mirzazhanov Web Page</title>
-    <!-- font icons -->
     <link rel="stylesheet" href="themify-icons/css/themify-icons.css">
-    <!-- font icons -->
 	<link rel="stylesheet" href="portfolio.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-    <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
             <a class="logo" href="#">Ilya Mirzazhanov</a>  
@@ -43,9 +40,7 @@
                 </div>
             </a>
         </div>          
-    </nav><!-- End of Page Navbar -->
-
-    <!-- page header -->
+    </nav>
     <header id="home" class="header">
         <div class="overlay"></div>
         <div class="header-content container">
@@ -57,13 +52,9 @@
 
             <button class="btn btn-primary">Check My Works</button>
         </div>              
-    </header><!-- end of page header -->
-
-    <!-- about section -->
+    </header>
     <section class="section pt-0" id="about">
-        <!-- container -->
         <div class="container text-center">
-            <!-- about wrapper -->
             <div class="about">
                 <div class="about-img-holder">
                     <img src="ilya.jpg" class="about-img">
@@ -77,59 +68,30 @@
                     </p>
                     <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
                 </div>              
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
-    </section> <!-- end of about section -->
+            </div>
+        </div>
+    </section> 
 
 
     <section class="section pt-0" id="xkcd">
-        <!-- container -->
         <div class="container text-center">
-            <!-- about wrapper -->
             <div class="comic">
                 <div class="comic-caption">
+                    <script src="./dist/bundle.js"></script>
                     <img src="" class="about-img" id="comic_im">
-                    <script> 
-                        async function fun() { 
-                            let url = 'https://fwd.innopolis.app/api/hw2?email=i.mirzazhanov@innopolis.university';
-                            let response = await fetch(url);
-                            let commits = await response.text();
-
-                            let xkcd_url = 'https://getxkcd.vercel.app/api/comic?num='
-                            let img_url = xkcd_url + commits
-
-                            let img_resp = await fetch(img_url);
-                            let text_test = await img_resp.text();
-
-                            //let info = await response.json();
-
-                            let obj = JSON.parse(text_test);
-
-                            let image = document.getElementById("comic_im").src = obj.img;
-
-                            let dis = document.getElementById("disc").firstChild.data = obj.safe_title + '. ' + obj.alt + '\n' + obj.month + ' ' + obj.year;
-
-                            //document.getElementById("comic").value=text_test;
-
-
-                            //alert(commits[0].author.login);
-                        } 
-                    </script>
-
                     <p class="section-subtitle" id="disc">Want to get XKCD comic?</p>
                     <h2 class="section-title mb-3">Click button!</h2>
                     <input type="button" value="Get comic" class="btn-rounded btn btn-outline-primary mt-4" onclick = "fun()" id="comic"></input>
                 </div>              
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
-    </section> <!-- end of about section -->
+            </div>
+        </div>
+    </section>
 
-    <!-- service section -->
     <section class="section" id="service">
         <div class="container text-center">
             <p class="section-subtitle">My projects</p>
             <h6 class="section-title mb-6">Gallery</h6>
-            <!-- row -->
+
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
@@ -167,16 +129,15 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- end of row -->
+            </div>
         </div>
-    </section><!-- end of service section -->
+    </section>
 
-    <!-- portfolio section -->
     <section class="section" id="portfolio">
         <div class="container text-center">
             <p class="section-subtitle">What I Did ?</p>
             <h6 class="section-title mb-6">Portfolio</h6>
-            <!-- row -->
+
             <div class="row">
                 <div class="col-md-4">
                     <a href="#" class="portfolio-card">
@@ -211,16 +172,15 @@
                         </span>                     
                     </a>
                 </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
-    </section> <!-- end of portfolio section -->
+            </div>
+        </div>
+    </section> 
     
-    <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
             <p class="section-subtitle">Want to say how good am I?</p>
             <h6 class="section-title mb-5">Contact Me!!!</h6>
-            <!-- contact form -->
+
             <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
@@ -236,11 +196,10 @@
                         <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
                     </div>
                 </div>  
-            </form><!-- end of contact form -->
-        </div><!-- end of container -->
-    </section><!-- end of contact section -->
+            </form>
+        </div>
+    </section>
 
-    <!-- footer -->
     <div class="container">
         <footer class="footer">       
             <p class="mb-0">Copyright Ilya Mirzazhanov 2023</p>
@@ -250,14 +209,11 @@
                 <a href="https://myaccount.google.com/?pli=1" class="link"><i class="ti-google"></i></a>
             </div>
         </footer>
-    </div> <!-- end of page footer -->
+    </div>
 	
-	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
-    <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>>
 </body>
 </html>
